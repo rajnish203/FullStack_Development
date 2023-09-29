@@ -133,6 +133,67 @@ var gh="i am the king "
           /* Function Declaration and Expression */
 
 
+          /* Function Declaration */
+          function fact(n){
+            var ans=1;
+            for(i=1;i<=n;i++){
+                ans*=i;
+            }
+            return ans;
+        }
+        var factorial=fact(0);
+        console.log(factorial);
+
+
+        /* Function Expression 
+        It means that a function is assigned to a variable followed by semin colon.
+        This function is called by its variable name
+        There are two types of function Expression
+        1> Named Function Expression
+        2>Without Function Name called Anonymous 
+        */
+        var factorial=function fact1(n){// this is named function expression
+            var ans=1;
+            for(i=1;i<=n;i++){
+                ans*=i;
+            }
+            return ans;
+        };
+        var factorial2=function(n){  //  This is anonymous function expression
+            // var ans=1;
+            // for(var i=1;i<=n;i++){
+            //     ans*=i;
+            // }
+            // return ans;
+            if(n==0){
+                return 1;
+            }
+            return n*factorial2(n-1)
+        }      
+        console.log(factorial(6))// function called by its variable name  
+        console.log(fact(4))// this name is generate the error 
+        console.log(factorial)// the value of variable is function
+        console.log(factorial2)// in case of anonymous func exp variable name is assigned as func name
+        console.log(factorial2(3));
+
+        /* Diffrence between func Declaration and Func Exp 
+        Hoisting is not work for the func exp and hoisting is working for the func declaration.
+        Func exp is pression is preferable for write the code when do not want interfare the hoisting
+        */
+
+        /* Function passed as Argument */
+        function ncr(n, r, factorial){  // Here factorial func exp is passed as argument, we can also passed a func
+            return factorial(n)/(factorial(r)*factorial(n-r));
+        }
+        console.log(ncr(5, 2, factorial));
+        
+       
+
+
+
+
+
+
  
 
 
