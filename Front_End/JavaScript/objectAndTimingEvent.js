@@ -221,10 +221,14 @@ console.log(x, y, z);
 
 
 
-/* Deep copy and Shallow Copy */
+/* Deep copy and Shallow Copy 
 
+Deep copy :- Value copied to the new variable and disconnected from the old variable if any change occur it does not affect the old variable
+ 
+Shallow copy:- Copied to the new Variable but still connected to the old variable when any change occur in new variable it affect theb old variable
 const a =4;
-cons
+*/
+
 
 
 
