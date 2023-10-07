@@ -212,26 +212,19 @@ function f (a, b, c){
     b.push("bob");
     c.first=false;
 }
-var x=4;
-var y=["raj", "rahul"];
-var z={ first:true};
+var x=4;// call by value
+var y=["raj", "rahul"];// call by refrence
+var z={ first:true};// call by refrence
 f(x,y,z);
 console.log(x, y, z);
 
 
 
 
+/* Deep copy and Shallow Copy */
 
-
-
-
-
-
-
-
-
-
-
+const a =4;
+cons
 
 
 
