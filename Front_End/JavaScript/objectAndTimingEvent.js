@@ -119,3 +119,120 @@ console.log(student.Address["city"]);
 
 
 
+/* Arrays and Object 
+
+Arrays in javascript is object. In this  index is key 
+
+*/
+var arr=[1,2,3,4,5,6,7,8,9];
+console.log(arr);
+ var obj={    // this is similar to the array var obj =[1,2,3,4,5]
+    "0":1,
+    "1":2,
+    "2":3,
+    "3":4,
+    "4":5
+ }
+ // length is only valid for the array not for object
+
+ arr[10]="abc";
+ console.log(arr);//[ 1, 2, 3, 4, 5, 6, 7, 8, 9, <1 empty item>, 'abc' ]
+ console.log(arr.length)
+ arr.prop1="demo";
+ console.log(arr);
+ console.log(arr.length);
+ // By adding any porperty to the array it does not affect the length of the array
+
+ /* Iterating over array using for in */
+
+
+ for(var i in arr){ // i will print the keys of the arrays
+    console.log(i);
+ }
+
+
+
+ /* TIMING EVENTS
+
+ It allow the run javascript code after certain amonut of time or time interval
+ In this function are 
+ 1> setTimeout :- It takes two parameter one is function and to execute another is time interval in millseconds 
+    it means it excute the function after that given period of time , Here we pass the function in setTimeout not call the function 
+    call the function is like function_name();
+    and funcion pass means only pass the name of the function like setTimeout(sayHellow, 1000) this.
+ 2> setInverval :- It is the same as the setTimeout function the only differnec is it repeat the same after a certain interval untiln
+    we will stop it.
+
+ 3> clearInteval:- It takes the id as parameter which is return by the setInterval function. It is use to stop the setInterval repeation 
+    after a certain count.
+
+  */
+ function sayHellow(){
+    console.log("Hello");
+ }
+//  setTimeout(sayHellow, 1000); // here sayHellow function execute after the 1000 ms. it execute only once 
+//  setInterval(sayHellow, 1000); // it excute until we will not stop it.
+
+
+ /* Example of setInterval And clearInterval */
+//  var sec=1;
+//  function sayHellow(){
+//     console.log(" after ", sec, " Good Morning");
+//     sec++;
+//     if(sec==11){
+//         clearInterval(id);   // it will stop after the 10 th execution
+//     }
+//  }
+//  var id =setInterval (sayHellow , 1000);
+
+
+
+
+/* COUNT DOWN TIMER */
+var sec2 =10;
+function coutnDownTimer(){
+    console.log(sec2);
+    sec2--;
+    if(sec2==0){
+        console.log("Time Up!!")
+        clearInterval(id);
+    }
+
+}
+var id=setInterval(coutnDownTimer, 1000);
+
+
+
+/* Pass by value and Pass by refrence 
+ In javascript in case of object and array is pass by refrence and other primitive type is pass by value
+
+*/
+function f (a, b, c){
+    a=3;
+    b.push("bob");
+    c.first=false;
+}
+var x=4;
+var y=["raj", "rahul"];
+var z={ first:true};
+f(x,y,z);
+console.log(x, y, z);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
