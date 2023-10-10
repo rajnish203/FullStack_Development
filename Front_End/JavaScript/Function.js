@@ -186,6 +186,13 @@ var gh="i am the king "
             return factorial(n)/(factorial(r)*factorial(n-r));
         }
         console.log(ncr(5, 2, factorial));
+
+
+
+
+
+
+        console.log(" I am king of this world")
         
        
 
