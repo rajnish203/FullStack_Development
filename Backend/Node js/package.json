@@ -8,6 +8,9 @@
     "start": "node server.js"
   },
   "author": "Rajnish",
-  "license": "ISC", 
-  "type": "module"  
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "nodemailer": "^6.9.6"
+  }
 }
