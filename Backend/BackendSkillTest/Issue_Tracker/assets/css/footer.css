@@ -1,0 +1,16 @@
+.footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #CED4DA;
+    box-shadow: rgb(6, 1, 11);
+    text-align: center;
+}
+#foot{
+    font-weight: 500;
+   justify-content: center;
+   text-align: center;
+   font-size: large;
+   color: 2px solid black;
+}
