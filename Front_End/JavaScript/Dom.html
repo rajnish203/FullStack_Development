@@ -1,0 +1,64 @@
+<!-- It is the basically tree like sturcture which represent the whole logical representation of the document or webpage.
+With the HTML DOM, JavaScript can access and change all the elements of an HTML document.
+When a web page is loaded, the browser creates a Document Object Model of the page.
+With the object model, JavaScript gets all the power it needs to create dynamic HTML:
+
+JavaScript can change all the HTML elements in the page
+JavaScript can change all the HTML attributes in the page
+JavaScript can change all the CSS styles in the page
+JavaScript can remove existing HTML elements and attributes
+JavaScript can add new HTML elements and attributes
+JavaScript can react to all existing HTML events in the page
+JavaScript can create new HTML events in the page
+
+**** Access the DOM ****
+1> Document
+2> window.document
+3> Screen
+4> window.screen
+
+****Selecting elements of DOM****
+getElementById() – select an element by id.
+getElementsByName() – select elements by name.
+getElementsByTagName()  – select elements by a tag name.
+getElementsByClassName() – select elements by one or more class names.
+querySelector()  – select elements by CSS selectors.
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <h1 id="one">Heading</h1>
+    <h1 id="two">Heading</h1>
+    <p class ="para"> Sample Paragraph</p>
+
+    <!-- mouse event for the event Handler 
+    Two way to handle the event 
+    
+     1  -->
+    <!-- <button id="btn" onclick="alert('Hello')"> Say Hello</button> -->
+    <button id="btn"> Say Hello</button>
+
+
+    <div id ='outer'></div>
+    <input type="text" name="search" id="search">
+
+
+
+    <!-- Porpagattion of event -->
+
+    <div id="outer1">
+        <div id="inner">
+        </div>
+    </div>
+<p>Hi i am rajnish </p>
+   <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+ console.log(module2.sum2(20, 5));

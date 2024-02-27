@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="products.css">
+    <link rel="stylesheet" href="/css/form.css">
+    <link rel="stylesheet" href="/css/nav.css">
+    <link rel="stylesheet" href="/css/product.css">
+    <link rel="stylesheet" href="/css/register.css">
+    <script src="main.js"></script>
+</head>
+<style>
+    .carousel {
+    width: 90%;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto; /* Horizontally center the carousel */
+    display: flex;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: center; /* Vertically center the carousel */
+    box-shadow: #333;
+}
+
+/* Style individual slides in the carousel */
+.slide {
+    width: 100%;
+    height: 100%;
+    display: block; /* Remove inline-block space */
+    position: absolute; /* Position slides absolutely */
+    opacity: 0; /* Start with slides hidden */
+    animation: slide 15s linear infinite; /* Apply animation to slides */
+}
+
+/* Define the image properties */
+.slide img {
+    width: 100%; /* Make images fill the container width */
+    height: 100%; /* Make images fill the container height */
+    object-fit: cover; /* Maintain aspect ratio and cover the container */
+}
+
+/* Define keyframes for the animation */
+@keyframes slide {
+    0% {
+        opacity: 0; /* Start with slide hidden */
+    }
+    25% {
+        opacity: 1; /* Fade in the slide at 25% of the animation */
+    }
+    75% {
+        opacity: 1; /* Keep the slide visible at 75% */
+    }
+    100% {
+        opacity: 0; /* Fade out the slide at the end */
+    }
+}
+
+</style>
+<body>
+    <nav>
+        <div class="container">
+            <h1 class="logo">Inventory_App</h1>
+            <ul class="nav-links">
+                <li><a href="/">Product</a></li>
+                <li><a href="/new">Add New Product</a></li>
+                <% if(locals.userEmail) { %>
+                <li><a href="/logout">Logout</a></li>
+
+                <% } else { %>
+                    <li><a href="/register">Register</a></li>
+                    <li><a href="/login">Log In</a></li>
+                 <% } %>
+
+            </ul>
+        </div>
+    </nav>
+    <div class="carousel">
+        <div class="slide">
+            <img src="https://t3.ftcdn.net/jpg/05/52/28/26/360_F_552282630_UWQeFWZBO5eeVxigmC1w9a7QeyXFfxce.jpg" alt="Image 1">
+        </div>
+        <div class="slide">
+            <img src="https://wallpapers.com/images/featured/3d-flower-skzbu7jpqddc1qnx.jpg" alt="Image 2">
+        </div>
+        <div class="slide">
+            <img src="https://as1.ftcdn.net/v2/jpg/06/01/93/96/1000_F_601939626_1P9Q9BCdAV5FrecrfkICSYMkC6GWdB0u.jpg" alt="Image 3">
+        </div>
+        <div class="slide">
+            <img src="https://media.istockphoto.com/id/542727462/photo/houston-texas-skyline.jpg?s=2048x2048&w=is&k=20&c=HeuHFo-c-15W-xHlbbHo5VlWTEVhuPmUA5tfpQ1F644=" alt="">
+        </div>
+    </div>
+    <%- body %>
+</body>
+</html>
